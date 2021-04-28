@@ -8,15 +8,15 @@ const paresArray = []
 const unary = []
 
 //chamo a função abaixo que vai agrupar os itens do array por par e mandar para o array de pares.
-pares(nArray, function(current, next){
-    paresArray.push([current, next])
+pares(nArray, function(primeiro, segundo){
+    paresArray.push([primeiro, segundo])
 })
 
 //função para agrupar os itens por pares
-function pares(arr, func){
-    for(var i=0; i < arr.length; i+=2){
+function pares(array, funct){
+    for(var i=0; i < array.length; i+=2){
         //devolve o indice e o indice + 1, ou seja, os pares.
-        func(arr[i], arr[i + 1])
+        funct(array[i], array[i + 1])
     }
 }
 
